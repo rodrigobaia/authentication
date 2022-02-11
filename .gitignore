@@ -3,3 +3,12 @@
 ################################################################################
 
 /Authentication/.vs/Authentication
+/Authentication/Authentication/bin
+/Authentication/Authentication/obj
+/Gescar.Sistema.Web/.vs/Gescar.Sistema.Web
+/Gescar.Sistema.Web/Gescar.Sistema.Web/bin
+/Gescar.Sistema.Web/Gescar.Sistema.Web/obj
+/.vs/Authentication
+/Authentication/bin
+/Authentication/obj
+*.user

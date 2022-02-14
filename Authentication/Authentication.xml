@@ -4,5 +4,133 @@
         <name>Authentication</name>
     </assembly>
     <members>
+        <member name="T:Authentication.Auth.ApplicationDbContext">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Authentication.Auth.ApplicationDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Authentication.Auth.ApplicationDbContext})">
+            <summary>
+            
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="M:Authentication.Auth.ApplicationDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="T:Authentication.Auth.ContextFactory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Authentication.Auth.ContextFactory.CreateDbContext(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Authentication.Auth.UserRoles">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Auth.UserRoles.Admin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Authentication.Auth.UserRoles.User">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Controllers.AuthController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Authentication.Controllers.AuthController.#ctor(Microsoft.AspNetCore.Identity.UserManager{Microsoft.AspNetCore.Identity.IdentityUser},Microsoft.AspNetCore.Identity.RoleManager{Microsoft.AspNetCore.Identity.IdentityRole},Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="userManager"></param>
+            <param name="roleManager"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:Authentication.Controllers.AuthController.Login(Authentication.Models.LoginModel)">
+            <summary>
+            
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Controllers.AuthController.Register(Authentication.Models.RegisterModel)">
+            <summary>
+            
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Controllers.AuthController.RegisterAdmin(Authentication.Models.RegisterModel)">
+            <summary>
+            
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Authentication.Models.LoginModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Models.LoginModel.Username">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Models.LoginModel.Password">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Models.RegisterModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Models.RegisterModel.Username">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Models.RegisterModel.Email">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Models.RegisterModel.Password">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.Models.Response">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Models.Response.Status">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Models.Response.Message">
+            <summary>
+            
+            </summary>
+        </member>
     </members>
 </doc>

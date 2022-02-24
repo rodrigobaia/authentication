@@ -14,7 +14,7 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
-        "ENV_DATABASE_SERVER": "localhost",
+        "ENV_DATABASE_SERVER": "192.168.1.10",
         "ENV_DATABASE_PORT": "3306",
         "ENV_DATABASE_NAME": "IdentityUserDB",
         "ENV_DATABASE_USER": "userIdentityAdmin",
@@ -32,7 +32,7 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
-        "ENV_DATABASE_SERVER": "localhost",
+        "ENV_DATABASE_SERVER": "192.168.1.10",
         "ENV_DATABASE_PORT": "3306",
         "ENV_DATABASE_NAME": "IdentityUserDB",
         "ENV_DATABASE_USER": "userIdentityAdmin",
@@ -51,7 +51,7 @@
       "useSSL": true,
       "environmentVariables": {
         "ENV_DATABASE_SERVER": "localhost",
-        "ENV_DATABASE_PORT": "3306",
+        "ENV_DATABASE_PORT": "192.168.1.10",
         "ENV_DATABASE_NAME": "IdentityUserDB",
         "ENV_DATABASE_USER": "userIdentityAdmin",
         "ENV_DATABASE_PWD": "102030",

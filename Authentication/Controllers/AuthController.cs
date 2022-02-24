@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json.Linq;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -13,7 +14,7 @@ namespace Authentication.Controllers
     /// <summary>
     /// 
     /// </summary>
-    [Route("api/[controller]")]
+    [Route("api/auth")]
     [ApiController]
     public class AuthController : ControllerBase
     {
@@ -35,6 +36,17 @@ namespace Authentication.Controllers
             _userManager = userManager;
             _roleManager = roleManager;
             _configuration = configuration;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="valor"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public async Task<IActionResult> LoginAsync(Dictionary<string, string> valor)
+        {
+            return Ok(valor);
         }
 
         /// <summary>

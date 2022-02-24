@@ -61,6 +61,13 @@
             <param name="roleManager"></param>
             <param name="configuration"></param>
         </member>
+        <member name="M:Authentication.Controllers.AuthController.LoginAsync(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            
+            </summary>
+            <param name="valor"></param>
+            <returns></returns>
+        </member>
         <member name="M:Authentication.Controllers.AuthController.Login(Authentication.Models.LoginModel)">
             <summary>
             

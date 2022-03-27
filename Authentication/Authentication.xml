@@ -33,6 +33,17 @@
             <param name="args"></param>
             <returns></returns>
         </member>
+        <member name="T:Authentication.Auth.IInitalLoadSeed">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Authentication.Auth.IInitalLoadSeed.InitialLoadAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Authentication.Auth.UserRoles">
             <summary>
             
@@ -53,41 +64,365 @@
             
             </summary>
         </member>
-        <member name="M:Authentication.Controllers.AuthController.#ctor(Microsoft.AspNetCore.Identity.UserManager{Microsoft.AspNetCore.Identity.IdentityUser},Microsoft.AspNetCore.Identity.RoleManager{Microsoft.AspNetCore.Identity.IdentityRole},Microsoft.Extensions.Configuration.IConfiguration)">
-            <summary>
-            
-            </summary>
-            <param name="userManager"></param>
-            <param name="roleManager"></param>
-            <param name="configuration"></param>
-        </member>
         <member name="M:Authentication.Controllers.AuthController.LoginAsync(System.Collections.Generic.Dictionary{System.String,System.String})">
             <summary>
-            
+            Login
             </summary>
-            <param name="valor"></param>
+            <param name="values"></param>
             <returns></returns>
         </member>
-        <member name="M:Authentication.Controllers.AuthController.Login(Authentication.Models.LoginModel)">
+        <member name="T:Authentication.Controllers.MainController">
             <summary>
             
             </summary>
-            <param name="model"></param>
-            <returns></returns>
         </member>
-        <member name="M:Authentication.Controllers.AuthController.Register(Authentication.Models.RegisterModel)">
+        <member name="M:Authentication.Controllers.MainController.#ctor(Authentication.Business.INotifierBusiness,Authentication.Business.IUser)">
             <summary>
             
             </summary>
-            <param name="model"></param>
-            <returns></returns>
+            <param name="notifierBusiness"></param>
+            <param name="appUser"></param>
         </member>
-        <member name="M:Authentication.Controllers.AuthController.RegisterAdmin(Authentication.Models.RegisterModel)">
+        <member name="P:Authentication.Controllers.MainController.UsuarioId">
             <summary>
             
             </summary>
-            <param name="model"></param>
+        </member>
+        <member name="P:Authentication.Controllers.MainController.UsuarioAutenticado">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Authentication.Controllers.MainController.ValidOperation">
+            <summary>
+            Valida se a operação esta ok
+            </summary>
             <returns></returns>
+        </member>
+        <member name="M:Authentication.Controllers.MainController.CustomResponse(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Controllers.MainController.CustomResponse(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)">
+            <summary>
+            
+            </summary>
+            <param name="modelState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Controllers.MainController.NotificarErroModelInvalida(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)">
+            <summary>
+            
+            </summary>
+            <param name="modelState"></param>
+        </member>
+        <member name="M:Authentication.Controllers.MainController.NotificarErro(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="mensagem"></param>
+        </member>
+        <member name="T:Authentication.Extensions.AppSettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Authentication.Extensions.AppSettings.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Extensions.AppSettings.Secret">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Extensions.AppSettings.ExpiracaoHoras">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Extensions.AppSettings.Emissor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Extensions.AppSettings.ValidoEm">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Authentication.Extensions.AspNetUser.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Authentication.Extensions.AspNetUser.GetUserId">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Extensions.AspNetUser.GetUserEmail">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Extensions.AspNetUser.IsAuthenticated">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Extensions.AspNetUser.IsInRole(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Extensions.AspNetUser.GetClaimsIdentity">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Authentication.Extensions.ClaimsAuthorizeAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Authentication.Extensions.ClaimsAuthorizeAttribute.#ctor(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="claimName"></param>
+            <param name="claimValue"></param>
+        </member>
+        <member name="T:Authentication.Extensions.ClaimsPrincipalExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Authentication.Extensions.ClaimsPrincipalExtensions.GetUserId(System.Security.Claims.ClaimsPrincipal)">
+            <summary>
+            
+            </summary>
+            <param name="principal"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Authentication.Extensions.ClaimsPrincipalExtensions.GetUserEmail(System.Security.Claims.ClaimsPrincipal)">
+            <summary>
+            
+            </summary>
+            <param name="principal"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="T:Authentication.Extensions.CustomAuthorization">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Authentication.Extensions.CustomAuthorization.ValidarClaimsUsuario(Microsoft.AspNetCore.Http.HttpContext,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="claimName"></param>
+            <param name="claimValue"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Authentication.Extensions.ExceptionMiddleware">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Authentication.Extensions.ExceptionMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            
+            </summary>
+            <param name="next"></param>
+        </member>
+        <member name="M:Authentication.Extensions.ExceptionMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            
+            </summary>
+            <param name="httpContext"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Authentication.Extensions.IdentityMensagensPortugues">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Authentication.Extensions.IdentityMensagensPortugues.DefaultError">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Extensions.IdentityMensagensPortugues.ConcurrencyFailure">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Extensions.IdentityMensagensPortugues.PasswordMismatch">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Extensions.IdentityMensagensPortugues.InvalidToken">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Extensions.IdentityMensagensPortugues.LoginAlreadyAssociated">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Extensions.IdentityMensagensPortugues.InvalidUserName(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Extensions.IdentityMensagensPortugues.InvalidEmail(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Extensions.IdentityMensagensPortugues.DuplicateUserName(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Extensions.IdentityMensagensPortugues.DuplicateEmail(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Extensions.IdentityMensagensPortugues.InvalidRoleName(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Extensions.IdentityMensagensPortugues.DuplicateRoleName(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Extensions.IdentityMensagensPortugues.UserAlreadyHasPassword">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Extensions.IdentityMensagensPortugues.UserLockoutNotEnabled">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Extensions.IdentityMensagensPortugues.UserAlreadyInRole(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Extensions.IdentityMensagensPortugues.UserNotInRole(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Extensions.IdentityMensagensPortugues.PasswordTooShort(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Extensions.IdentityMensagensPortugues.PasswordRequiresNonAlphanumeric">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Extensions.IdentityMensagensPortugues.PasswordRequiresDigit">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Extensions.IdentityMensagensPortugues.PasswordRequiresLower">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authentication.Extensions.IdentityMensagensPortugues.PasswordRequiresUpper">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Authentication.Extensions.RequisitoClaimFilter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Authentication.Extensions.RequisitoClaimFilter.#ctor(System.Security.Claims.Claim)">
+            <summary>
+            
+            </summary>
+            <param name="claim"></param>
+        </member>
+        <member name="M:Authentication.Extensions.RequisitoClaimFilter.OnAuthorization(Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Authentication.Migrations._initialize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Authentication.Migrations._initialize.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
+        </member>
+        <member name="M:Authentication.Migrations._initialize.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="migrationBuilder"></param>
         </member>
         <member name="T:Authentication.Models.LoginModel">
             <summary>
@@ -135,6 +470,35 @@
             </summary>
         </member>
         <member name="P:Authentication.Models.Response.Message">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Authentication.ServiceExtension">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Authentication.ServiceExtension.RegisterServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Registrar Serviços
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Authentication.ServiceExtension.AddIdentityConfig(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Authentication.ServiceExtension.RegisterSeed(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.IServiceProvider)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+            <param name="serviceProvider"></param>
+        </member>
+        <member name="T:Authentication.Services.IServiceBase">
             <summary>
             
             </summary>

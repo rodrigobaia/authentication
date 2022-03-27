@@ -14,7 +14,7 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
-        "ENV_DATABASE_SERVER": "192.168.1.10",
+        "ENV_DATABASE_SERVER": "192.168.0.12",
         "ENV_DATABASE_PORT": "3306",
         "ENV_DATABASE_NAME": "IdentityUserDB",
         "ENV_DATABASE_USER": "userIdentityAdmin",
@@ -22,6 +22,10 @@
         "ENV_DATABASE_MAXPOOLSIZE": "75",
         "ENV_DATABASE_SSL_MODE": "none",
         "ENV_FUSO_HORARIO": "0",
+        "ENV_TOKEN_SECRECT": "MEUSEGREDOSUPERSECRETO",
+        "ENV_TOKEN_EXPIRACAOHORAS": "2",
+        "ENV_TOKEN_EMISSOR": "MeuSistema",
+        "ENV_TOKEN_VALIDOEM": "https://localhost",
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "applicationUrl": "https://localhost:7004;http://localhost:5004",
@@ -32,7 +36,7 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
-        "ENV_DATABASE_SERVER": "192.168.1.10",
+        "ENV_DATABASE_SERVER": "192.168.0.12",
         "ENV_DATABASE_PORT": "3306",
         "ENV_DATABASE_NAME": "IdentityUserDB",
         "ENV_DATABASE_USER": "userIdentityAdmin",
@@ -40,6 +44,10 @@
         "ENV_DATABASE_MAXPOOLSIZE": "75",
         "ENV_DATABASE_SSL_MODE": "none",
         "ENV_FUSO_HORARIO": "0",
+        "ENV_TOKEN_SECRECT": "MEUSEGREDOSUPERSECRETO",
+        "ENV_TOKEN_EXPIRACAOHORAS": "2",
+        "ENV_TOKEN_EMISSOR": "MeuSistema",
+        "ENV_TOKEN_VALIDOEM": "https://localhost",
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
@@ -50,14 +58,18 @@
       "publishAllPorts": true,
       "useSSL": true,
       "environmentVariables": {
-        "ENV_DATABASE_SERVER": "localhost",
-        "ENV_DATABASE_PORT": "192.168.1.10",
+        "ENV_DATABASE_SERVER": "192.168.0.12",
+        "ENV_DATABASE_PORT": "3306",
         "ENV_DATABASE_NAME": "IdentityUserDB",
         "ENV_DATABASE_USER": "userIdentityAdmin",
         "ENV_DATABASE_PWD": "102030",
         "ENV_DATABASE_MAXPOOLSIZE": "75",
         "ENV_DATABASE_SSL_MODE": "none",
         "ENV_FUSO_HORARIO": "0",
+        "ENV_TOKEN_SECRECT": "MEUSEGREDOSUPERSECRETO",
+        "ENV_TOKEN_EXPIRACAOHORAS": "2",
+        "ENV_TOKEN_EMISSOR": "MeuSistema",
+        "ENV_TOKEN_VALIDOEM": "https://localhost",
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     }

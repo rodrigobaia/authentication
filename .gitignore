@@ -12,3 +12,9 @@
 /Authentication/bin
 /Authentication/obj
 *.user
+/Authentication.Business/bin/Debug/net6.0
+/Authentication.Business/obj
+/Authentication.Domain/bin/Debug/net6.0
+/Authentication.Domain/obj
+/Authentication.Web/bin/Debug/net6.0
+/Authentication.Web/obj
